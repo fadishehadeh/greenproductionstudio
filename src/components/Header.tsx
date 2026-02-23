@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTheme } from "@/components/ThemeProvider";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -13,6 +14,7 @@ const navLinks = [
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { theme, toggle } = useTheme();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -51,6 +53,13 @@ const Header = () => {
               {link.label}
             </a>
           ))}
+          <button
+            onClick={toggle}
+            className="p-2 rounded-xl text-muted-foreground hover:text-foreground transition-colors"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
           <Button
             size="sm"
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-xl px-6"
@@ -87,6 +96,13 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
+              <button
+                onClick={toggle}
+                className="flex items-center gap-2 text-foreground font-medium py-2"
+              >
+                {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+                {theme === "dark" ? "Light Mode" : "Dark Mode"}
+              </button>
               <Button
                 className="bg-primary text-primary-foreground rounded-xl mt-2"
                 onClick={() => {

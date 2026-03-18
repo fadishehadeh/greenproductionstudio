@@ -20,30 +20,52 @@ const ProcessTimeline = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-sm font-medium text-primary uppercase tracking-wider">Our Process</span>
+          <span className="text-sm font-medium text-primary uppercase tracking-wider">How We Work</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mt-3 mb-4">
-            From Vision to <span className="text-gradient-primary">Reality</span>
+            From Vision to <span className="text-gradient-primary">Market-Ready Product</span>
           </h2>
+          <p className="text-muted-foreground max-w-xl mx-auto">
+            Our proven six-stage process has delivered 50+ successful digital projects across the MENA region — on time and on budget.
+          </p>
         </motion.div>
 
         <div className="relative">
-          {/* Connection line */}
-          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent -translate-y-1/2" />
+          {/* Animated connection line */}
+          <motion.div
+            className="hidden md:block absolute top-[2rem] left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+            style={{ originX: 0 }}
+          />
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {steps.map((step, i) => (
               <motion.div
                 key={step.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30, scale: 0.85 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.12 }}
+                transition={{ delay: i * 0.12, type: "spring", stiffness: 260, damping: 18 }}
                 className="text-center relative"
               >
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4 relative z-10 backdrop-blur-sm">
+                <motion.div
+                  className="w-16 h-16 mx-auto rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4 relative z-10 backdrop-blur-sm cursor-pointer"
+                  whileHover={{ scale: 1.2, rotate: 8, backgroundColor: "rgba(var(--primary), 0.2)", transition: { duration: 0.2 } }}
+                  whileTap={{ scale: 0.92 }}
+                >
                   <step.icon className="w-7 h-7 text-primary" />
-                </div>
-                <span className="text-xs text-primary font-semibold mb-1 block">0{i + 1}</span>
+                </motion.div>
+                <motion.span
+                  className="text-xs text-primary font-semibold mb-1 block"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.12 + 0.3 }}
+                >
+                  0{i + 1}
+                </motion.span>
                 <h3 className="font-display font-semibold text-foreground">{step.label}</h3>
               </motion.div>
             ))}

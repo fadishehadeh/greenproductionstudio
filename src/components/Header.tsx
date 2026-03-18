@@ -6,6 +6,7 @@ import { useTheme } from "@/components/ThemeProvider";
 
 const navLinks = [
   { label: "Services", href: "#services" },
+  { label: "Portfolio", href: "#portfolio" },
   { label: "Why Us", href: "#why-us" },
   { label: "Process", href: "#process" },
   { label: "Contact", href: "#contact" },
@@ -34,9 +35,9 @@ const Header = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-20">
-        <a href="#" className="flex items-center gap-3">
+        <a href="#" className="flex items-center gap-3" aria-label="Digital Solutions MENA - Home">
           <div className="w-10 h-10 rounded-xl bg-primary/20 border border-primary/30 flex items-center justify-center">
-            <span className="font-display font-bold text-primary text-lg">DS</span>
+            <span className="font-display font-bold text-primary text-lg">DSM</span>
           </div>
           <span className="font-display font-semibold text-lg text-foreground hidden sm:block">
             Digital Solutions <span className="text-primary">MENA</span>

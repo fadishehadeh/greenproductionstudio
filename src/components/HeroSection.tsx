@@ -8,6 +8,15 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden gradient-mesh">
       <ParticlesBackground />
 
+      {/* Hero background image */}
+      <img
+        src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&q=80"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+        style={{ opacity: 0.18 }}
+      />
+
       {/* Ambient glow orbs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[128px] animate-pulse-glow" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/8 rounded-full blur-[100px] animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
@@ -20,7 +29,7 @@ const HeroSection = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm mb-8">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">AI-Powered Digital Solutions</span>
+            <span className="text-sm font-medium text-primary">AI-Powered Digital Transformation for the MENA Region</span>
           </div>
         </motion.div>
 
@@ -30,9 +39,9 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.15 }}
           className="font-display text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-6"
         >
-          Transforming Ideas into{" "}
-          <span className="glow-text">Intelligent Digital</span>{" "}
-          Solutions
+          The MENA Region's{" "}
+          <span className="glow-text">Digital Transformation</span>{" "}
+          Partner
         </motion.h1>
 
         <motion.p
@@ -41,7 +50,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          We design, build, and scale AI-driven platforms for businesses across the MENA region.
+          We design, build, and scale high-performance web platforms, mobile apps, and AI-driven solutions for enterprises across the UAE, Saudi Arabia, Qatar, Egypt, and the wider GCC region.
         </motion.p>
 
         <motion.div
@@ -64,7 +73,7 @@ const HeroSection = () => {
             className="border-border/50 text-foreground hover:bg-muted/50 rounded-2xl px-8 h-14 text-base backdrop-blur-sm"
             onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
           >
-            Explore Our Solutions
+            Explore Our Services
           </Button>
         </motion.div>
 
@@ -76,7 +85,7 @@ const HeroSection = () => {
           className="mt-20 relative"
         >
           <div className="flex justify-center gap-4 flex-wrap">
-            {["AI & ML", "Cloud", "Security", "Analytics"].map((label, i) => (
+            {["UAE · KSA · Qatar", "AI & Automation", "Web & Mobile", "Cloud & Data"].map((label, i) => (
               <motion.div
                 key={label}
                 animate={{ y: [0, -8, 0] }}

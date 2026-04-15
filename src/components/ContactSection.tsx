@@ -50,10 +50,10 @@ const ContactSection = () => {
         >
           <span className="text-sm font-medium text-primary uppercase tracking-wider">Contact Us</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mt-3 mb-4">
-            Start Your <span className="text-gradient-primary">MENA Digital Project</span>
+            Start Your <span className="text-gradient-primary">Next Digital Project</span>
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
-            Tell us about your project and our team will get back to you within 24 hours. Serving clients across Dubai, Abu Dhabi, Riyadh, Doha, Cairo, and beyond.
+            Tell us about your project and our team will get back to you within 24 hours.
           </p>
         </motion.div>
 
@@ -74,7 +74,7 @@ const ContactSection = () => {
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 300, damping: 15, delay: 0.1 }}
               >
-                <CheckCircle className="w-16 h-16 text-secondary mx-auto mb-4" />
+                <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
               </motion.div>
               <h3 className="font-display text-2xl font-semibold mb-2">Message Sent!</h3>
               <p className="text-muted-foreground">We'll get back to you within 24 hours.</p>
@@ -101,26 +101,26 @@ const ContactSection = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.45 } } }}>
                   <label className="text-sm font-medium text-foreground mb-2 block">Name</label>
-                  <Input required name="name" value={fields.name} onChange={handleChange} placeholder="Your name" className="bg-muted/50 border-border/50 rounded-xl h-12 focus:border-primary" />
+                  <Input required name="name" value={fields.name} onChange={handleChange} placeholder="Your name" className="bg-background border-border rounded-xl h-12 focus:border-primary" />
                 </motion.div>
                 <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.45 } } }}>
                   <label className="text-sm font-medium text-foreground mb-2 block">Company</label>
-                  <Input name="company" value={fields.company} onChange={handleChange} placeholder="Company name" className="bg-muted/50 border-border/50 rounded-xl h-12 focus:border-primary" />
+                  <Input name="company" value={fields.company} onChange={handleChange} placeholder="Company name" className="bg-background border-border rounded-xl h-12 focus:border-primary" />
                 </motion.div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.45 } } }}>
                   <label className="text-sm font-medium text-foreground mb-2 block">Email</label>
-                  <Input required type="email" name="email" value={fields.email} onChange={handleChange} placeholder="you@company.com" className="bg-muted/50 border-border/50 rounded-xl h-12 focus:border-primary" />
+                  <Input required type="email" name="email" value={fields.email} onChange={handleChange} placeholder="you@company.com" className="bg-background border-border rounded-xl h-12 focus:border-primary" />
                 </motion.div>
                 <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.45 } } }}>
                   <label className="text-sm font-medium text-foreground mb-2 block">Phone</label>
-                  <Input type="tel" name="phone" value={fields.phone} onChange={handleChange} placeholder="+971 XX XXX XXXX" className="bg-muted/50 border-border/50 rounded-xl h-12 focus:border-primary" />
+                  <Input type="tel" name="phone" value={fields.phone} onChange={handleChange} placeholder="+1 (555) 123-4567" className="bg-background border-border rounded-xl h-12 focus:border-primary" />
                 </motion.div>
               </div>
               <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.45 } } }}>
                 <label className="text-sm font-medium text-foreground mb-2 block">Project Description</label>
-                <Textarea required rows={4} name="message" value={fields.message} onChange={handleChange} placeholder="Tell us about your project..." className="bg-muted/50 border-border/50 rounded-xl focus:border-primary resize-none" />
+                <Textarea required rows={4} name="message" value={fields.message} onChange={handleChange} placeholder="Tell us about your project..." className="bg-background border-border rounded-xl focus:border-primary resize-none" />
               </motion.div>
               <motion.div
                 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.45 } } }}
@@ -129,7 +129,7 @@ const ContactSection = () => {
               >
                 <Button type="submit" disabled={loading} size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-2xl h-14 text-base shadow-lg shadow-primary/25 disabled:opacity-70">
                   {loading ? (
-                    <><Loader2 className="mr-2 w-5 h-5 animate-spin" /> Sending…</>
+                    <><Loader2 className="mr-2 w-5 h-5 animate-spin" /> Sending...</>
                   ) : (
                     <>Send Message <Send className="ml-2 w-5 h-5" /></>
                   )}

@@ -30,18 +30,13 @@ const Header = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-lg shadow-primary/5"
+          ? "bg-background/85 backdrop-blur-xl border-b border-border/60 shadow-lg shadow-black/5"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-20">
-        <a href="#" className="flex items-center gap-3" aria-label="Digital Solutions MENA - Home">
-          <div className="w-10 h-10 rounded-xl bg-primary/20 border border-primary/30 flex items-center justify-center">
-            <span className="font-display font-bold text-primary text-lg">DSM</span>
-          </div>
-          <span className="font-display font-semibold text-lg text-foreground hidden sm:block">
-            Digital Solutions <span className="text-primary">MENA</span>
-          </span>
+        <a href="#" className="flex items-center gap-3" aria-label="Green Production Studio - Home">
+          <img src="/gps.svg" alt="Green Production Studio logo" className="h-14 w-auto object-contain" />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -49,7 +44,7 @@ const Header = () => {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
             >
               {link.label}
             </a>
@@ -73,6 +68,7 @@ const Header = () => {
         <button
           className="md:hidden text-foreground"
           onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle menu"
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>

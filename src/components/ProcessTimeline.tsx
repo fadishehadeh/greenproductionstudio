@@ -25,12 +25,11 @@ const ProcessTimeline = () => {
             From Vision to <span className="text-gradient-primary">Market-Ready Product</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Our proven six-stage process has delivered 50+ successful digital projects across the MENA region — on time and on budget.
+            Our proven six-stage process helps turn concepts into polished digital products with clear direction, efficient execution, and dependable delivery.
           </p>
         </motion.div>
 
         <div className="relative">
-          {/* Animated connection line */}
           <motion.div
             className="hidden md:block absolute top-[2rem] left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent"
             initial={{ scaleX: 0 }}
@@ -52,7 +51,7 @@ const ProcessTimeline = () => {
               >
                 <motion.div
                   className="w-16 h-16 mx-auto rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4 relative z-10 backdrop-blur-sm cursor-pointer"
-                  whileHover={{ scale: 1.2, rotate: 8, backgroundColor: "rgba(var(--primary), 0.2)", transition: { duration: 0.2 } }}
+                  whileHover={{ scale: 1.2, rotate: 8, transition: { duration: 0.2 } }}
                   whileTap={{ scale: 0.92 }}
                 >
                   <step.icon className="w-7 h-7 text-primary" />

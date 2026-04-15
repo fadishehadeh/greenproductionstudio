@@ -3,10 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
 const projects = [
-  // MENA — featured first
   {
     title: "Fashion Trust Arabia",
-    category: "MENA",
+    category: "Regional",
     tag: "Fashion",
     description: "Prestigious prize and support platform championing emerging Arab fashion designers on a global stage.",
     image: "/images/fta.png",
@@ -14,7 +13,7 @@ const projects = [
   },
   {
     title: "FTA Directory",
-    category: "MENA",
+    category: "Regional",
     tag: "Directory",
     description: "Curated directory connecting fashion talent, brands and industry professionals across the Arab world.",
     image: "/images/ftadirectory.png",
@@ -22,7 +21,7 @@ const projects = [
   },
   {
     title: "The Four Corners",
-    category: "MENA",
+    category: "Regional",
     tag: "Lifestyle",
     description: "Dynamic Saudi real estate brokerage and property management firm serving the Kingdom's vibrant marketplace, backed by seasoned regional professionals and a global investor portfolio.",
     image: "/images/4corners.png",
@@ -30,18 +29,17 @@ const projects = [
   },
   {
     title: "Masharii",
-    category: "MENA",
+    category: "Regional",
     tag: "Development",
     description: "International project management and real estate development company delivering quality-driven consultancy for public and private sector clients across the globe.",
     image: "/images/mashariii.png",
     url: "https://masharii.com/",
   },
-  // Creative
   {
     title: "TKONDOS",
     category: "Creative",
     tag: "Portfolio",
-    description: "A comprehensive property ecosystem covering sought-after rentals, expert property management, seamless facility operations, and top-tier concierge services — all under one roof.",
+    description: "A comprehensive property ecosystem covering sought-after rentals, expert property management, seamless facility operations, and top-tier concierge services - all under one roof.",
     image: "/images/tkondos.png",
     url: "https://tkondoscy.com/",
   },
@@ -49,7 +47,7 @@ const projects = [
     title: "Maria Mouawad",
     category: "Creative",
     tag: "Personal Brand",
-    description: "GIA-trained jewellery designer and gemologist crafting handcrafted fine jewellery inspired by earth and nature — blending versatility, fine craftsmanship, and effortless wearability.",
+    description: "GIA-trained jewellery designer and gemologist crafting handcrafted fine jewellery inspired by earth and nature - blending versatility, fine craftsmanship, and effortless wearability.",
     image: "/images/maria.png",
     url: "https://mariamouawad.com/",
   },
@@ -57,7 +55,7 @@ const projects = [
     title: "Odd Ends",
     category: "Creative",
     tag: "Design Studio",
-    description: "A creative label redefining brand storytelling at the intersection of fashion, film, and visual culture — founded by a product designer and filmmaker dedicated to authentic, boundary-pushing work.",
+    description: "A creative label redefining brand storytelling at the intersection of fashion, film, and visual culture - founded by a product designer and filmmaker dedicated to authentic, boundary-pushing work.",
     image: "/images/oddends.png",
     url: "https://oddends.me/",
   },
@@ -65,11 +63,10 @@ const projects = [
     title: "Metre Karre",
     category: "Creative",
     tag: "Real Estate",
-    description: "Luxury real estate agency specialising in apartment rentals and sales across Lebanon, France, Greece, and beyond — offering expert brokerage and a personalised global approach.",
+    description: "Luxury real estate agency specialising in apartment rentals and sales across Lebanon, France, Greece, and beyond - offering expert brokerage and a personalised global approach.",
     image: "/images/metrekarre.png",
     url: "https://www.metrekarre.com/",
   },
-  // Ireland
   {
     title: "Anam Cara Travel",
     category: "Ireland",
@@ -82,7 +79,7 @@ const projects = [
     title: "Envirosafe Ireland",
     category: "Ireland",
     tag: "Industrial",
-    description: "Trusted partner to pharmaceutical, chemical, and healthcare industries — supplying containment systems, gas detection, air quality monitoring, and laboratory safety equipment.",
+    description: "Trusted partner to pharmaceutical, chemical, and healthcare industries - supplying containment systems, gas detection, air quality monitoring, and laboratory safety equipment.",
     image: "/images/envirosafe.png",
     url: "https://envirosafeireland.ie/",
   },
@@ -90,11 +87,10 @@ const projects = [
     title: "Rent A Cottage",
     category: "Ireland",
     tag: "Tourism",
-    description: "Over 30 years helping visitors discover stunning Irish cottage holidays — renowned for warm welcomes, exceptional service, and unforgettable stays across the island of Ireland.",
+    description: "Over 30 years helping visitors discover stunning Irish cottage holidays - renowned for warm welcomes, exceptional service, and unforgettable stays across the island of Ireland.",
     image: "/images/rent.png",
     url: "https://rentacottage.ie/",
   },
-  // Wellness
   {
     title: "Soma Healing Collective",
     category: "Wellness",
@@ -107,7 +103,7 @@ const projects = [
     title: "Lift Training Studios",
     category: "Wellness",
     tag: "Fitness",
-    description: "More than a gym — LIFT is a strength movement focused on lasting physical and mental health, with expert personal training and classes that build a stronger body and mind.",
+    description: "More than a gym - LIFT is a strength movement focused on lasting physical and mental health, with expert personal training and classes that build a stronger body and mind.",
     image: "/images/lift.png",
     url: "https://www.lifttrainingstudios.ie/",
   },
@@ -119,12 +115,11 @@ const projects = [
     image: "/images/yoga.png",
     url: "https://www.yogasacredspace.com/",
   },
-  // E-Commerce
   {
     title: "School Uniforms Ireland",
     category: "E-Commerce",
     tag: "Retail",
-    description: "Proudly independent, family-owned Irish retailer since 1999 — specialising in school uniforms, sportswear, and occasion wear for schools and families across Ireland.",
+    description: "Proudly independent, family-owned Irish retailer since 1999 - specialising in school uniforms, sportswear, and occasion wear for schools and families across Ireland.",
     image: "/images/kidstuff.png",
     url: "https://schooluniforms.ie/",
   },
@@ -154,7 +149,7 @@ const projects = [
   },
 ];
 
-const filters = ["All", "Ireland", "MENA", "Wellness", "E-Commerce", "Creative"];
+const filters = ["All", "Ireland", "Regional", "Wellness", "E-Commerce", "Creative"];
 
 const containerVariants = {
   hidden: {},
@@ -174,7 +169,6 @@ const PortfolioSection = () => {
   return (
     <section id="portfolio" className="section-padding">
       <div className="max-w-7xl mx-auto">
-        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -186,11 +180,10 @@ const PortfolioSection = () => {
             Client <span className="text-gradient-primary">Portfolio</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Real websites built for real businesses — from Ireland to the MENA region and beyond.
+            Real websites built for real businesses across regional and international markets.
           </p>
         </motion.div>
 
-        {/* Filter tabs */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -215,7 +208,6 @@ const PortfolioSection = () => {
           ))}
         </motion.div>
 
-        {/* Cards grid */}
         <AnimatePresence mode="wait">
           <motion.div
             key={active}
@@ -234,7 +226,6 @@ const PortfolioSection = () => {
                 whileHover={{ y: -6, transition: { duration: 0.25 } }}
                 className="glass-card overflow-hidden group cursor-pointer block"
               >
-                {/* Screenshot */}
                 <div className="relative h-48 overflow-hidden bg-muted">
                   <motion.img
                     src={project.image}
@@ -243,23 +234,20 @@ const PortfolioSection = () => {
                     whileHover={{ scale: 1.06 }}
                     transition={{ duration: 0.5 }}
                   />
-                  {/* Hover overlay */}
                   <motion.div
                     className="absolute inset-0 bg-primary/85 flex flex-col items-center justify-center gap-2"
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
                     transition={{ duration: 0.25 }}
                   >
-                    <ExternalLink className="w-6 h-6 text-white" />
-                    <span className="text-white font-semibold text-sm tracking-wide">Visit Site</span>
+                    <ExternalLink className="w-6 h-6 text-foreground" />
+                    <span className="text-foreground font-semibold text-sm tracking-wide">Visit Site</span>
                   </motion.div>
-                  {/* Tag badge */}
-                  <span className="absolute top-3 left-3 bg-background/80 backdrop-blur-sm text-xs font-semibold text-primary px-3 py-1 rounded-full border border-primary/20">
+                  <span className="absolute top-3 left-3 bg-background/85 backdrop-blur-sm text-xs font-semibold text-primary px-3 py-1 rounded-full border border-primary/20">
                     {project.tag}
                   </span>
                 </div>
 
-                {/* Content */}
                 <div className="p-5">
                   <div className="flex items-start justify-between gap-2 mb-2">
                     <h3 className="font-display font-semibold text-foreground leading-snug">
@@ -281,4 +269,3 @@ const PortfolioSection = () => {
 };
 
 export default PortfolioSection;
-

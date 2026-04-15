@@ -12,7 +12,6 @@ const CTASection = () => {
           viewport={{ once: true }}
           className="glass-card p-12 md:p-16 text-center relative overflow-hidden"
         >
-          {/* Pulsing ambient glow */}
           <motion.div
             className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-primary/20 rounded-full blur-[80px]"
             animate={{ scale: [1, 1.3, 1], opacity: [0.6, 1, 0.6] }}
@@ -27,7 +26,7 @@ const CTASection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              Ready to Lead the <span className="glow-text">MENA Digital Economy</span>?
+              Ready to build with <span className="glow-text">Green Production Studio</span>?
             </motion.h2>
             <motion.p
               className="text-muted-foreground text-lg mb-8 max-w-lg mx-auto"
@@ -36,7 +35,7 @@ const CTASection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.15 }}
             >
-              Partner with Digital Solutions MENA to accelerate your digital transformation — whether you're in Dubai, Riyadh, Doha, or Cairo.
+              Partner with Green Production Studio to create a cleaner, more refined digital presence without disrupting the systems your business already relies on.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 15 }}

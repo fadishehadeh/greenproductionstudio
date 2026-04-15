@@ -1,6 +1,6 @@
-# Digital Solutions MENA
+# Green Production Studio
 
-A modern, AI-focused digital agency landing page targeting the MENA region.
+A modern, premium digital production website for Green Production Studio.
 
 ## Getting started
 

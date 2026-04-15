@@ -12,7 +12,7 @@ const sectors = [
 
 const TrustStrip = () => {
   return (
-    <section className="py-16 border-y border-border/30">
+    <section className="py-16 border-y border-border/50 bg-background">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.p
           initial={{ opacity: 0 }}
@@ -20,7 +20,7 @@ const TrustStrip = () => {
           viewport={{ once: true }}
           className="text-center text-sm text-muted-foreground mb-10 tracking-wider uppercase"
         >
-          Trusted by leading organisations across the UAE, Saudi Arabia, Qatar &amp; Egypt
+          Trusted across service, retail, wellness, property, and creative industries
         </motion.p>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
           {sectors.map(({ name, icon: Icon }, i) => (
@@ -32,7 +32,7 @@ const TrustStrip = () => {
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -4, scale: 1.08, transition: { duration: 0.2 } }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-3 text-muted-foreground/50 hover:text-muted-foreground transition-colors duration-300 group cursor-pointer"
+              className="flex items-center gap-3 text-muted-foreground/60 hover:text-foreground transition-colors duration-300 group cursor-pointer"
             >
               <motion.div
                 className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary/40 transition-all duration-300"

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border/30 py-12 px-6 md:px-12">
+    <footer className="border-t border-border/50 bg-foreground text-background py-12 px-6 md:px-12">
       <motion.div
         className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6"
         initial="hidden"
@@ -15,26 +15,21 @@ const Footer = () => {
           variants={{ hidden: { opacity: 0, y: 15 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}
           whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
         >
-          <div className="w-8 h-8 rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center">
-            <span className="font-display font-bold text-primary text-sm">DSM</span>
-          </div>
-          <span className="font-display font-semibold text-foreground">
-            Digital Solutions <span className="text-primary">MENA</span>
-          </span>
+          <img src="/gps.svg" alt="Green Production Studio logo" className="h-12 w-auto object-contain" />
         </motion.div>
 
         <motion.p
-          className="text-sm text-muted-foreground"
+          className="text-sm text-background/70"
           variants={{ hidden: { opacity: 0, y: 15 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}
         >
-          Accelerating digital transformation across the UAE, Saudi Arabia, Qatar &amp; Egypt.
+          Clean, modern digital production for brands that value clarity, polish, and performance.
         </motion.p>
 
         <motion.p
-          className="text-xs text-muted-foreground/60"
+          className="text-xs text-background/55"
           variants={{ hidden: { opacity: 0, y: 15 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}
         >
-          © {new Date().getFullYear()} Digital Solutions MENA. All rights reserved.
+          Copyright {new Date().getFullYear()} Green Production Studio. All rights reserved.
         </motion.p>
       </motion.div>
     </footer>
